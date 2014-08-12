@@ -8,6 +8,6 @@ Thanks to the following people, who I'd either adapted code from or used ideas f
 * [Bill Erickson](http://www.billerickson.net/core-functionality-plugin/)
 * [Andrea Whitmer](http://www.nutsandboltsmedia.com/how-to-create-a-custom-functionality-plugin-and-why-you-need-one/)
 
-And here's a [http://redblue.us/2014/07/writing-my-core-functionality-plugin/](blog post) about what I'm trying to accomplish here.
+And here's a [blog post](http://redblue.us/2014/07/writing-my-core-functionality-plugin/) about what I'm trying to accomplish here.
 
 
