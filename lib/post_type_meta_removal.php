@@ -10,7 +10,6 @@
 function rbc_remove_meta_boxes() {
 	// Everything
 	remove_meta_box( 'genesis_inpost_scripts_box', '', 'normal' ); // remove the scripts box from everywhere (not for client use, typically not used)
-	remove_meta_box( 'slugdiv', '', 'normal' ); // remove the slug meta box from everywhere (typically not used)
 	remove_meta_box( 'postcustom', '', 'normal' ); // remove custom files from everywhere (typically not used)
 	remove_meta_box( 'revisionsdiv', '', 'normal' ); // remove custom files from everywhere (typically not used)
 
