@@ -5,7 +5,7 @@ A core functionality plugin for WordPress to be used on client sites. It does a 
 
 Thanks to the following people, who I'd either adapted code from or used ideas from in the making of this plugin:
 
-Bill Erickson: http://www.billerickson.net/core-functionality-plugin/
-Andrea Whitmer: http://www.nutsandboltsmedia.com/how-to-create-a-custom-functionality-plugin-and-why-you-need-one/
+* Bill Erickson: http://www.billerickson.net/core-functionality-plugin/
+* Andrea Whitmer: http://www.nutsandboltsmedia.com/how-to-create-a-custom-functionality-plugin-and-why-you-need-one/
 
 
