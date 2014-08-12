@@ -3,7 +3,7 @@
 	Plugin Name: Core Functionality
 	Plugin URI: http://redblue.us
 	Description: Functionality specific to your site which should be maintained even if you switch themes
-	Version: 1.0.0
+	Version: 1.0.1
     Author: Jon Schroeder
     Author URI: http://redblue.us
 
