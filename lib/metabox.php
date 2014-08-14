@@ -58,6 +58,6 @@ add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 function cmb_initialize_cmb_meta_boxes() {
 
 	if ( ! class_exists( 'cmb_Meta_Box' ) )
-		require_once 'init.php';
+		require_once '/metabox/init.php';
 
 }
