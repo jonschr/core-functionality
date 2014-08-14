@@ -23,27 +23,19 @@ function rb_metaboxes( array $meta_boxes ) {
 	/**
 	 * Sample metabox to demonstrate each field type included
 	 */
-	$meta_boxes['coupons_metabox'] = array(
-		'id'         => 'coupons_metabox',
-		'title'      => __( 'Coupon information', 'rb' ),
-		'pages'      => array( 'coupons', ), // Post type
+	$meta_boxes['test_metabox'] = array(
+		'id'         => 'test_metabox',
+		'title'      => __( 'Test metabox group', 'rb' ),
+		'pages'      => array( 'page', ), // Post type
 		'context'    => 'normal',
 		'priority'   => 'high',
 		'show_names' => true, // Show field names on the left
 		'fields'     => array(
 			array(
-				'name' => __( 'Coupon code', 'rb' ),
-				'desc' => __( '<p>Add your coupon code right here, and it will be styled appropriately for users.</p>', 'rb' ),
-				'id'   => $prefix . 'coupon_code',
+				'name' => __( 'Test field', 'rb' ),
+				'desc' => __( 'This is a description.', 'rb' ),
+				'id'   => $prefix . 'test_individual_field',
 				'type' => 'text_medium',
-			),
-			array(
-				'name' => __( 'Link to product on Amazon', 'cmb' ),
-				'desc' => __( 'e.g. http://amazon.com/link-to-your-product', 'rb' ),
-				'id'   => $prefix . 'amazon_url',
-				'type' => 'text_url',
-				'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
-				// 'repeatable' => true,
 			),
 		),
 	);
