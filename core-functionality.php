@@ -44,6 +44,9 @@ include_once( 'lib/post_type_meta_removal.php' );
 // Register taxonomies
 // include_once( 'lib/taxonomies.php' );
 
+// Add custom fields
+include_once( 'lib/metabox.php' );
+
 // General
 include_once( 'lib/general.php' );
 
