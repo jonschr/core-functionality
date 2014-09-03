@@ -57,6 +57,17 @@ function rbc_edit_admin_menu() {
 add_action( 'admin_menu', 'rbc_edit_admin_menu', 9999 );
 
 /**
+ *Add full access to Gravity Forms for webmasters
+ *
+ */
+function rbc_add_gf_cap()
+{
+    $role = get_role( 'webmaster' );
+    $role->add_cap( 'gform_full_access' );
+}
+add_action( 'admin_init', 'rbc_add_gf_cap' );
+
+/**
  * Customize Menu Order
  * @since 1.0.0
  *
