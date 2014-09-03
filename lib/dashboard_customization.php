@@ -175,7 +175,7 @@ add_action( 'wp_before_admin_bar_render', 'rbc_remove_toolbar_links' );
  *
 */
 function rbc_custom_login_logo() {
-    echo '<style type="text/css"> h1 {  background-image:url(' . '/wp-content/plugins/core-functionality/img/logo_admin.png)  !important; } h1 a { background:none !important;} </style>';
+    echo '<style type="text/css"> h1 {  background-image:url(' . '/wp-content/plugins/core-functionality-master/img/logo_admin.png)  !important; } h1 a { background:none !important;} </style>';
 }
 add_action('login_head',  'rbc_custom_login_logo');
 
