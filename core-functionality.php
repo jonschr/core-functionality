@@ -45,7 +45,7 @@ include_once( 'lib/post_type_meta_removal.php' );
 // include_once( 'lib/taxonomies.php' );
 
 // Custom meta (using the CMB library)
-include_once( 'lib/metabox/metabox.php' );
+// include_once( 'lib/metabox/metabox.php' );
 
 // General
 include_once( 'lib/general.php' );

@@ -19,7 +19,7 @@ function rbc_edit_admin_menu() {
         // Core WordPress menu items
         remove_menu_page( 'options-general.php' ); // wordpress settings and subitems (Settings > * )
         remove_menu_page( 'tools.php' ); // tools and subitems (Tools > * )
-        remove_menu_page( 'edit.php' ); // remove the blog (Posts)
+        // remove_menu_page( 'edit.php' ); // remove the blog (Posts)
         remove_menu_page( 'branding' );
         remove_menu_page( 'users.php' );
         remove_submenu_page( 'themes.php', 'themes.php' ); // themes subitem (Appearance > Themes)
@@ -86,11 +86,8 @@ function rbc_custom_menu_order( $menu_ord ) {
         'separator',
         'edit.php?post_type=page', //the page tab
         'edit.php', //the posts tab
-        'edit.php?post_type=projects',
-        'edit.php?post_type=project',
-        'edit.php?post_type=qa_faqs',
-        'edit.php?post_type=services',
-        'edit.php?post_type=testimonial',
+        'edit.php?post_type=testimonials',
+        'edit.php?post_type=faqs',
         'separator1',
         'edit.php?post_type=envira',
         'edit.php?post_type=soliloquy',
@@ -155,7 +152,7 @@ function rbc_remove_toolbar_links() {
 
     if ( $user_role == 'webmaster' ) {
         $wp_admin_bar->remove_menu('themes'); // subitem themes
-        $wp_admin_bar->remove_menu('customize'); // subitem customize
+        // $wp_admin_bar->remove_menu('customize'); // subitem customize
         $wp_admin_bar->remove_menu('widgets'); // subitem widgets
         $wp_admin_bar->remove_menu('background'); // subitem background
         $wp_admin_bar->remove_menu('ddw-gravityforms-toolbar'); // Gravity Forms Extended Toolbar
@@ -186,7 +183,7 @@ add_action( 'wp_before_admin_bar_render', 'rbc_remove_toolbar_links' );
  *
 */
 function rbc_custom_login_logo() {
-    echo '<style type="text/css"> h1 {  background-image:url(' . '/wp-content/plugins/core-functionality-master/img/logo_admin.png)  !important; } h1 a { background:none !important;} </style>';
+    echo '<style type="text/css"> h1 {  background-image:url(' . '/wp-content/plugins/core-functionality/img/logo_admin.png)  !important; } h1 a { background:none !important;} </style>';
 }
 add_action('login_head',  'rbc_custom_login_logo');
 
