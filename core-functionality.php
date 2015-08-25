@@ -39,7 +39,7 @@ include_once( 'lib/dashboard_customization.php' );
 // include_once( 'lib/post_type_meta_removal.php' );
 
 // Register post types
-// include_once( 'lib/post_types.php' );
+include_once( 'lib/post_types.php' );
 
 // Register taxonomies
 // include_once( 'lib/taxonomies.php' );
