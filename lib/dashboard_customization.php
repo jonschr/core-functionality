@@ -88,6 +88,7 @@ function rbc_custom_menu_order( $menu_ord ) {
         'edit.php', //the posts tab
         'edit.php?post_type=testimonials',
         'edit.php?post_type=faqs',
+        'edit.php?post_type=partners',
         'separator1',
         'edit.php?post_type=envira',
         'edit.php?post_type=soliloquy',
