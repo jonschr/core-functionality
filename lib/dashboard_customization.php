@@ -92,6 +92,7 @@ function rbc_custom_menu_order( $menu_ord ) {
         'separator1',
         'edit.php?post_type=envira',
         'edit.php?post_type=soliloquy',
+        'optin-monster-api-settings',
         'upload.php', // the media manager
         'gf_edit_forms',
         'edit-comments.php', // the comments tab
