@@ -1,7 +1,7 @@
 <?php
 
 // Add all Gravity Forms capabilities (that way, we can remove them in a more fine-grained way later)
-add_filter( 'td-webmaster-user-roleoption_cap_gravityforms_edit_forms', __return_true );
+add_filter( 'td-webmaster-user-roleoption_cap_gravityforms_edit_forms', '__return_true' );
 
 /**
  *
