@@ -25,7 +25,7 @@ define( 'RBC_DIR', dirname( __FILE__ ) );
 include_once( 'lib/roles.php' );
 
 // Dashboard customization: hide meaningless dashboard widgets, organize the menu, and hide unnecessary items from the webmaster role
-include_once( 'lib/dashboard_customization.php' );
+// include_once( 'lib/dashboard_customization.php' );
 
 // Plugin customization
 
