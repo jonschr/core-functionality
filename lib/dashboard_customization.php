@@ -89,6 +89,7 @@ function rbc_custom_menu_order( $menu_ord ) {
         'edit.php?post_type=testimonials',
         'edit.php?post_type=faqs',
         'edit.php?post_type=partners',
+        'edit.php?post_type=members',
         'separator1',
         'edit.php?post_type=envira',
         'edit.php?post_type=soliloquy',
@@ -105,6 +106,12 @@ function rbc_custom_menu_order( $menu_ord ) {
 }
 add_filter( 'custom_menu_order', 'rbc_custom_menu_order' );
 add_filter( 'menu_order', 'rbc_custom_menu_order' );
+
+//* Remove links from the sidebar
+function rbc_remove_links() {
+     remove_menu_page( 'link-manager.php' );
+}
+add_action( 'admin_menu', 'rbc_remove_links' );
 
 /**
  * Remove dashboard panels
@@ -254,56 +261,3 @@ function rbc_custom_footer_admin ( $defaulttext ) {
         return $footertext;
 }
 add_filter('admin_footer_text', 'rbc_custom_footer_admin');
-
-/**
- * Add IP Address and memory usage to the admin footer area
- * @since 1.0.0
- *
- * @author Apasionados
- * @link http://apasionados.es/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=server-ip-memory-usage-plugin
- *
- * Display the ip address and memory usage
- *
- */
-if ( is_admin() ) { 
-
-    class rbc_ip_address_memory_usage {
-
-        var $memory = false;
-        var $server_ip_address = false;
-
-        function rbc_ip_address_memory_usage() {
-            return $this->__construct();
-        }
-
-        function __construct() {
-            add_action( 'init', array (&$this, 'check_limit') );
-            add_filter( 'admin_footer_text', array (&$this, 'add_footer') );
-            $this->memory = array();                    
-        }
-        
-        function check_limit() {
-            $this->memory['limit'] = (int) ini_get('memory_limit') ;
-        }
-        
-        function check_memory_usage() {
-            
-            $this->memory['usage'] = function_exists('memory_get_usage') ? round(memory_get_usage() / 1024 / 1024, 2) : 0;
-            
-            if ( !empty($this->memory['usage']) && !empty($this->memory['limit']) ) {
-                $this->memory['percent'] = round ($this->memory['usage'] / $this->memory['limit'] * 100, 0);
-                $this->memory['color'] = 'font-weight:normal;';
-                if ($this->memory['percent'] > 75) $this->memory['color'] = 'font-weight:bold;color:#E66F00';
-                if ($this->memory['percent'] > 90) $this->memory['color'] = 'font-weight:bold;color:red';
-            }       
-        }
-
-        function add_footer($content) {
-            $this->check_memory_usage();
-            $server_ip_address = $_SERVER[ 'SERVER_ADDR' ];
-            $content .= ' &middot; ' . __( 'Memory', 'server-ip-memory-usage' ) . ': ' . $this->memory['usage'] . ' ' . __( 'of', 'server-ip-memory-usage' ) . ' ' . $this->memory['limit'] . ' MB (<span style="' . $this->memory['color'] . '">' . $this->memory['percent'] . '%</span>) &middot; IP ' . $server_ip_address . ' &middot; PHP ' . PHP_VERSION . ' @' . (PHP_INT_SIZE * 8) . 'BitOS';
-            return $content;
-        }
-    }
-    add_action( 'plugins_loaded', create_function('', '$memory = new rbc_ip_address_memory_usage();') );
-}
