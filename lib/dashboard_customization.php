@@ -22,6 +22,7 @@ function rbc_edit_admin_menu() {
         // remove_menu_page( 'edit.php' ); // remove the blog (Posts)
         remove_menu_page( 'branding' );
         remove_menu_page( 'users.php' );
+        remove_menu_page( 'wp-responsive-menu' );
         remove_submenu_page( 'themes.php', 'themes.php' ); // themes subitem (Appearance > Themes)
         remove_submenu_page( 'themes.php', 'customize.php' ); // customize subitem (Appearance > Header)
         remove_submenu_page( 'themes.php', 'custom-header' ); // header subitem (Appearance > Header)
@@ -82,6 +83,7 @@ function rbc_custom_menu_order( $menu_ord ) {
     if ( !$menu_ord ) return true;
     return array(
         'index.php', // this represents the dashboard link
+        'acf-options',
         'genesis',
         'separator',
         'edit.php?post_type=page', //the page tab
@@ -93,6 +95,7 @@ function rbc_custom_menu_order( $menu_ord ) {
         'separator1',
         'edit.php?post_type=envira',
         'edit.php?post_type=soliloquy',
+        'mapsvg-config',
         'optin-monster-api-settings',
         'upload.php', // the media manager
         'gf_edit_forms',
