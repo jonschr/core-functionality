@@ -27,20 +27,6 @@ include_once( 'lib/roles.php' );
 // Dashboard customization: hide meaningless dashboard widgets, organize the menu, and hide unnecessary items from the webmaster role
 include_once( 'lib/dashboard_customization.php' );
 
-// Plugin customization
-
-    // WooTestimonials and WooProjects: hide typically unused metaboxes and disable the built-in gallery feature for projects
-    // include_once( 'lib/plugin_wooprojects_wootestimonials_customizations.php' );
-
-    // QA_FAQ: hide the Yoast and Envira metaboxes
-    // include_once( 'lib/plugin_qa_faq_customization.php' );
-
-// Post type meta customization: remove typically unused metaboxes
-// include_once( 'lib/post_type_meta_removal.php' );
-
-// Register post types
-// include_once( 'lib/post_types.php' );
-
 // Register taxonomies
 // include_once( 'lib/taxonomies.php' );
 
